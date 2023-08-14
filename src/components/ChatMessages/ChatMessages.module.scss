@@ -1,0 +1,10 @@
+.ChatMessages {
+  width: calc(100% - 38px);
+  height: calc(90% - 72px);
+  border-radius: 16px;
+  border: 1px solid #FFF;
+  background: #FFF;
+  box-shadow: 0px 2px 31px 13px rgba(10, 63, 142, 0.08);
+  padding: 36px 19px 36px 19px;
+  overflow-y: scroll;
+}

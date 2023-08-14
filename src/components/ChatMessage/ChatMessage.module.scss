@@ -1,0 +1,71 @@
+/* Добавьте следующие стили */
+
+.message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.botMessage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-right: auto;
+}
+
+.userMessage {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  align-items: center;
+  margin-left: auto;
+}
+
+.text {
+  width: max-content;
+  max-width: 400px;
+  padding: 12px 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-radius: 28px;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: SF Pro Text;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+}
+
+.botMessage .text {
+  background: rgba(34, 118, 245, 0.20);
+  color: #000;
+}
+
+.userMessage .text {
+  background: #007afe;
+  color: #fff;
+}
+
+/* Добавьте стили для аватаров */
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px; /* Отступы между аватаром и текстом */
+}
+
+.botAvatar {
+  background-color: #007afe;
+}
+
+.userAvatar {
+  background-color: #d3e4fd;
+  color: #007afe;
+  font-size: 20px;
+  font-weight: bold;
+}
