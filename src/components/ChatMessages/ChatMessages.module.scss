@@ -7,4 +7,30 @@
   box-shadow: 0px 2px 31px 13px rgba(10, 63, 142, 0.08);
   padding: 36px 19px 36px 19px;
   overflow-y: scroll;
+  scrollbar-color: rgba(0, 122, 254, 0.5) white;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(0, 122, 254, 0.5) inset;
+    border-radius: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(0, 122, 254, 0.5);
+  }
+  @media (max-width: 850px) {
+    font-size: 36px;
+    height: 95%;
+  }
+  @media (max-width: 600px) {
+    padding: 5px 5px 5px 5px;
+    width: calc(100% - 10px);
+    height: 100%;
+  }
 }

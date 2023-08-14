@@ -1,6 +1,10 @@
 .ChatApp {
   padding: 1% 24% 0 24%;
   height: 64vh;
+  @media (max-width: 850px) or (orientation: portrait) {
+    padding: 5% 5% 0 5%;
+  }
+
 }
 
 .title_up {
@@ -11,6 +15,10 @@
   margin: 0;
   line-height: 155%;
   text-transform: capitalize;
+  @media (max-width: 850px) or (orientation: portrait) {
+    font-size: 36px;
+    line-height: 100%;
+  }
 }
 
 .title_down {

@@ -1,9 +1,10 @@
-import { ChatApp } from "./components/ChatApp/ChatApp";
-function App() {
+import React from "react";
+import ChatApp from "./components/ChatApp/ChatApp";
 
+const App: React.FC = () => {
   return (
-    <ChatApp/>
+    <ChatApp />
   );
-}
+};
 
 export default App;

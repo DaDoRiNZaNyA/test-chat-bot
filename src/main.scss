@@ -2,6 +2,10 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('/src/assets/img/background.jpg');
-  background-size: cover;
+  background-size: 150%;
   background-position: top;
+
+  @media (orientation: portrait) {
+    background-size: 350%;
+  }
 }
