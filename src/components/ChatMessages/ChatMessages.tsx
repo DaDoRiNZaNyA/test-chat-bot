@@ -4,9 +4,10 @@ import { ChatMessage } from "../ChatMessage/ChatMessage";
 
 interface ChatMessagesProps {
   messages: string[];
+  stopBot: () => void;
 }
 
-export const ChatMessages: React.FC<ChatMessagesProps> = ({ messages }) => {
+export const ChatMessages: React.FC<ChatMessagesProps> = ({ messages, stopBot }) => {
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -22,6 +23,9 @@ export const ChatMessages: React.FC<ChatMessagesProps> = ({ messages }) => {
           key={index}
           message={msg.slice(5)}
           isBot={msg.startsWith("Bot:")}
+          isTyping={msg === "Bot: Bot is typing..."}
+          stopBot={stopBot}
+          showStopButton={index === messages.length - 1}
         />
       ))}
     </div>

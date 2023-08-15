@@ -4,9 +4,12 @@ import style from './ChatMessage.module.scss';
 interface ChatMessageProps {
   isBot: boolean;
   message: string;
+  isTyping: boolean;
+  stopBot: () => void;
+  showStopButton: boolean;
 }
 
-export const ChatMessage: React.FC<ChatMessageProps> = ({ isBot, message }) => {
+export const ChatMessage: React.FC<ChatMessageProps> = ({ isBot, message, isTyping, stopBot, showStopButton }) => {
   const messageClass = isBot ? style.botMessage : style.userMessage;
   const avatarClass = isBot ? style.botAvatar : style.userAvatar;
 
@@ -21,8 +24,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ isBot, message }) => {
       </div>
       <div className={style.text}>
         {message}
-        {isBot && (
-          <span className={style.typingAnimation}>Bot is typing...</span>
+        {isBot && isTyping && showStopButton && (
+          <button className={style.stopButton} onClick={stopBot}>X</button>
         )}
       </div>
     </div>
